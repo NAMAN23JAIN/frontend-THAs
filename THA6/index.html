@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="heading">
+        <div class="selected" id="selected">
+
+        </div>
+        <div class="remaining" id="remaining">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div>
+    <div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div><div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div><div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div><div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div><div class="row">
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+        <div class="column" onclick="myfun(this)"></div>
+    </div>
+
+    <script>
+        var a=0
+        var b=36
+    
+        function myfun(box){
+    if (box.classList.contains('columnClicked')){
+        box.classList.remove('columnClicked');
+        a--
+        b++;
+        document.getElementById('selected').innerHTML="SELECTED SEATS ARE:  "+a ;
+        document.getElementById('remaining').innerHTML="REMAINING SEATS ARE:  "+b ;
+
+    } else {
+        box.classList.add('columnClicked');
+        a++;
+        b--;
+        document.getElementById('selected').innerHTML="SELECTED SEATS ARE:  "+a;
+        document.getElementById('remaining').innerHTML="REMAINING SEATS ARE:  "+b;
+
+    }
+}
+    </script>
+</body>
+</html>
